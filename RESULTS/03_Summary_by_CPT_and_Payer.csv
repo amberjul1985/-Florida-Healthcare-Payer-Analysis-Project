@@ -1,0 +1,29 @@
+CPT_Code_Short,CPT_Full,Payer_Type,N,Mean_Price,Median_Price,Std_Dev,Min_Price,Max_Price,CV_Percent
+Clinical Brachytherapy Radiati,Clinical Brachytherapy Radiation Treatme,Medicaid,2024,683.999435770751,335.7,911.8825593987114,76.68,18565.807500000003,133.31627362691825
+Clinical Brachytherapy Radiati,Clinical Brachytherapy Radiation Treatme,Medicare,3306,746.6386267392619,609.0,573.9730402351511,13.75,6951.81,76.87427621335637
+Clinical Brachytherapy Radiati,Clinical Brachytherapy Radiation Treatme,Private / Commercial,9421,2736.364563391932,1374.0,15475.670652410563,1.1267976000000002,770536.0,565.5558787542291
+Clinical Brachytherapy Radiati,Clinical Brachytherapy Radiation Treatme,Self-pay / Other,43,1049.0193023255815,681.0,613.359546321558,208.0,2168.0,58.469805556656105
+Clinical Treatment Planning,Clinical Treatment Planning (External an,Medicaid,1029,802.309868707483,120.0,1602.7222400908245,68.5233,8414.69,199.7634957018292
+Clinical Treatment Planning,Clinical Treatment Planning (External an,Medicare,1563,1259.8422328854765,1278.0,960.5590943954488,67.0,8414.69,76.24439547445832
+Clinical Treatment Planning,Clinical Treatment Planning (External an,Private / Commercial,5503,2234.8322160672724,1182.0,11350.803014693403,2.5041204,790090.0,507.9040356178454
+Clinical Treatment Planning,Clinical Treatment Planning (External an,Self-pay / Other,36,1611.8430555555556,1212.05,1862.2612305410084,118.5,7670.400000000001,115.53613883946913
+"Medical Radiation Physics, Dos","Medical Radiation Physics, Dosimetry, Tr",Medicaid,2928,599.4240924863388,119.82,1499.3944963756794,9.9063,9832.0,250.1391777825232
+"Medical Radiation Physics, Dos","Medical Radiation Physics, Dosimetry, Tr",Medicare,4623,803.3267099286178,423.0,791.5562976907597,22.0,6370.66,98.53479137536657
+"Medical Radiation Physics, Dos","Medical Radiation Physics, Dosimetry, Tr",Private / Commercial,14633,1400.8737531002446,691.5,10529.569936353964,1.5568194000000004,1169274.0,751.6430308620739
+"Medical Radiation Physics, Dos","Medical Radiation Physics, Dosimetry, Tr",Self-pay / Other,81,893.866049382716,375.0,2212.8988028470026,118.5,12147.0,247.5649236678338
+Neutron Beam Treatment Deliver,Neutron Beam Treatment Delivery,Medicaid,94,1866.2987234042555,950.0,2196.3791663373913,896.0,11177.0,117.68636707477604
+Neutron Beam Treatment Deliver,Neutron Beam Treatment Delivery,Medicare,226,7608.823274336283,7791.0,1428.439507754415,2016.38,10359.07,18.77346149663356
+Neutron Beam Treatment Deliver,Neutron Beam Treatment Delivery,Private / Commercial,636,18203.820986261635,12599.0,97956.30383457424,26.613134400000003,2476196.0,538.1084768329767
+Neutron Beam Treatment Deliver,Neutron Beam Treatment Delivery,Self-pay / Other,3,14038.333333333334,12599.0,2492.998462360804,12599.0,16917.0,17.75850738948691
+Radiation Treatment Delivery,Radiation Treatment Delivery,Medicaid,1174,434.96740570698466,121.0,1319.6525208197852,0.3996,6000.0,303.3911285087802
+Radiation Treatment Delivery,Radiation Treatment Delivery,Medicare,1876,700.3073454157783,687.0,491.4927086838381,10.92,1576.0,70.18242945774541
+Radiation Treatment Delivery,Radiation Treatment Delivery,Private / Commercial,6213,608.4055326885692,405.0,2516.973083801765,0.0754799999999999,106683.0,413.6999005711136
+Radiation Treatment Delivery,Radiation Treatment Delivery,Self-pay / Other,34,382.84235294117644,314.8,236.1390154132868,106.81,779.0,61.680483781158216
+Radiation Treatment Management,Radiation Treatment Management,Medicaid,238,1128.7142277310927,323.0,1858.7726583622666,95.1075,6218.92,164.68053761479692
+Radiation Treatment Management,Radiation Treatment Management,Medicare,309,728.2230097087378,702.0,504.17433265307346,67.0,3721.72,69.23350758371731
+Radiation Treatment Management,Radiation Treatment Management,Private / Commercial,1173,1864.134660156863,1571.39,7121.570624376523,6.514014000000001,242675.0,382.0309109953064
+Radiation Treatment Management,Radiation Treatment Management,Self-pay / Other,6,1178.0316666666665,1200.555,671.3486835145108,507.19,1809.0,56.98901842037445
+Stereotactic Radiation Treatme,Stereotactic Radiation Treatment Deliver,Medicaid,1299,2343.4930946882214,577.46,3908.204874113379,76.68,29676.86,166.76835459732075
+Stereotactic Radiation Treatme,Stereotactic Radiation Treatment Deliver,Medicare,2010,2845.748552238806,769.0,3452.5983615701984,54.18,19682.52,121.32478671926133
+Stereotactic Radiation Treatme,Stereotactic Radiation Treatment Deliver,Private / Commercial,6515,8691.848458613887,2305.0,42277.39883815875,8.0932446,2476196.0,486.40285250556286
+Stereotactic Radiation Treatme,Stereotactic Radiation Treatment Deliver,Self-pay / Other,30,7207.334666666667,1444.0,16090.950959412527,208.72,85366.0,223.25799624418522

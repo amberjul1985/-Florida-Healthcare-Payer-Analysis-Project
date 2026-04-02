@@ -1,0 +1,119 @@
+
+================================================================================
+FOCUSED DEMOGRAPHIC ANALYSIS - FINAL REPORT
+Healthcare Pricing × Key Demographic Factors
+================================================================================
+
+FOCUS: 4 KEY VARIABLES
+─────────────────────────────────────────────────────────────────────────────
+1. Income Level (% earning $100K+)
+   → Proxy for purchasing power & negotiating ability
+
+2. Age (% Population 65+)
+   → Proxy for healthcare usage & Medicare prevalence
+
+3. Insurance Mix (% Private, % Public, % Uninsured)
+   → Directly determines pricing mechanisms & negotiation patterns
+
+4. Population Size
+   → Indicator of market competition
+
+ANALYSIS DATASET
+─────────────────────────────────────────────────────────────────────────────
+Pricing Data: 67,026 records from 38 cities
+Demographics: 45 cities
+Merged Data: 37 cities with both pricing & demographics
+
+PRICE VARIATION CLASSIFICATION
+─────────────────────────────────────────────────────────────────────────────
+Median CV: 188.0%
+Mean CV: 217.5%
+Range: 30.6% to 1133.8%
+
+HIGH Variation Cities: 18 (CV > 188.0%)
+LOW Variation Cities: 19 (CV ≤ 188.0%)
+
+KEY FINDINGS: GROUP COMPARISON (HIGH vs LOW Variation)
+─────────────────────────────────────────────────────────────────────────────
+
+Income Level (% earning $100K+):
+  HIGH variation cities: 38.3%
+  LOW variation cities:  35.3%
+  Difference: 3.0%   NO
+
+Senior Population (% 65+):
+  HIGH variation cities: 27.2%
+  LOW variation cities:  17.7%
+  Difference: 9.5%   NO
+
+Private Insurance Coverage:
+  HIGH variation cities: 77.5%
+  LOW variation cities:  79.3%
+  Difference: -1.8%   NO
+
+Public Insurance Coverage:
+  HIGH variation cities: 25.2%
+  LOW variation cities:  22.9%
+  Difference: 2.3%   NO
+
+Uninsured Population:
+  HIGH variation cities: 8.0%
+  LOW variation cities:  8.1%
+  Difference: -0.1%   NO
+
+Population Size (Total):
+  HIGH variation cities: 140,351
+  LOW variation cities:  127,327
+  Difference: 13,024   NO
+
+KEY FINDINGS: CORRELATION ANALYSIS
+─────────────────────────────────────────────────────────────────────────────
+
+PREDICTING MEAN PRICE:
+
+  No significant predictors of median price
+
+PREDICTING PRICE VARIATION (CV):
+
+  No significant predictors of price variation
+
+INTERPRETATION
+─────────────────────────────────────────────────────────────────────────────
+The analysis reveals the relationship between key demographic factors and 
+healthcare pricing patterns in Florida cities.
+
+Income appears to NOT correlate with pricing levels,
+suggesting that affluence does not influence healthcare costs.
+
+Senior population does not appear to be associated with pricing patterns,
+suggesting age composition doesn't matter for healthcare economics.
+
+Insurance mix is not a major factor in pricing,
+with insurance coverage not affecting prices.
+
+VISUALIZATIONS
+─────────────────────────────────────────────────────────────────────────────
+4 focused visualizations generated:
+
+1. 13_key_variables_comparison.png
+   → Box plots comparing income, age, insurance between groups
+
+2. 14_key_variables_vs_cv_scatter.png
+   → Scatter plots showing key variables vs price variation
+
+3. 15_key_variables_correlation_heatmap.png
+   → Correlation matrix of key variables
+
+4. 16_mean_price_by_key_groups.png
+   → Mean prices by income and insurance quartiles
+
+NEXT STEPS
+─────────────────────────────────────────────────────────────────────────────
+1. Review the 4 visualizations
+2. Focus discussion on significant relationships
+3. Prepare for presentation with key findings
+4. Consider drill-down analysis by treatment type or payer type
+
+================================================================================
+Report Generated: 2025-12-07 17:39:50
+================================================================================

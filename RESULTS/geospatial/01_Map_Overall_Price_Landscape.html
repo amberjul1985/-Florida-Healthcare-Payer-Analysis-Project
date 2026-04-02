@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fea56d04141c464c2a3ccb773c8c413f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+             <div style="position: fixed; 
+                     top: 10px; left: 50px; width: 500px; height: 90px; 
+                     background-color: white; border:2px solid grey; z-index:9999; 
+                     font-size:16px; font-weight: bold; padding: 10px">
+             Map #1: Overall Price Landscape<br/>
+             Average Negotiated Price by City<br/>
+             <span style="font-size: 12px; font-weight: normal;">Darker red = more expensive procedures</span>
+             </div>
+             
+    
+            <div class="folium-map" id="map_fea56d04141c464c2a3ccb773c8c413f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fea56d04141c464c2a3ccb773c8c413f = L.map(
+                "map_fea56d04141c464c2a3ccb773c8c413f",
+                {
+                    center: [27.5, -81.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2d27d4ee0ba52ce354721667892483fb = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2d27d4ee0ba52ce354721667892483fb.addTo(map_fea56d04141c464c2a3ccb773c8c413f);
+        
+    
+            var circle_marker_c138c4355db01ea399e2bb9dfacc1e56 = L.circleMarker(
+                [27.4891, -82.5784],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.370832290715374, "stroke": true, "weight": 2}
+            ).addTo(map_fea56d04141c464c2a3ccb773c8c413f);
+        
+    
+        var popup_5b75328cfa87ee397beabdb317673280 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_520d7d37edfb1e71ece259c5c618d7af = $(`<div id="html_520d7d37edfb1e71ece259c5c618d7af" style="width: 100.0%; height: 100.0%;">     <b>BRADENTON</b><br/>     Mean Price: $2,499.30<br/>     Median Price: $485.77<br/>     # Records: 672<br/>     # Hospitals: 672<br/>     # CPT Types: 7     </div>`)[0];
+                popup_5b75328cfa87ee397beabdb317673280.setContent(html_520d7d37edfb1e71ece259c5c618d7af);
+            
+        
+
+        circle_marker_c138c4355db01ea399e2bb9dfacc1e56.bindPopup(popup_5b75328cfa87ee397beabdb317673280)
+        ;
+
+        
+    
+    
+            var circle_marker_1f9ef8c46450db8474db2c0a292d6ebe = L.circleMarker(
+                [27.8958, -81.7738],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.008789076011617, "stroke": true, "weight": 2}
+            ).addTo(map_fea56d04141c464c2a3ccb773c8c413f);
+        
+    
+        var popup_080f0154502368cab134520ab9952cac = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b1f6610cd91638a2b64953bd1bb6fc6a = $(`<div id="html_b1f6610cd91638a2b64953bd1bb6fc6a" style="width: 100.0%; height: 100.0%;">     <b>Bartow</b><br/>     Mean Price: $837.70<br/>     Median Price: $335.70<br/>     # Records: 1,128<br/>     # Hospitals: 1128<br/>     # CPT Types: 7     </div>`)[0];
+                popup_080f0154502368cab134520ab9952cac.setContent(html_b1f6610cd91638a2b64953bd1bb6fc6a);
+            
+        
+
+        circle_marker_1f9ef8c46450db8474db2c0a292d6ebe.bindPopup(popup_080f0154502368cab134520ab9952cac)
+        ;
+
+        
+    
+    
+            var circle_marker_87e1b1eb99c8d0c6481d8cbb6527fd8c = L.circleMarker(
+                [27.9755, -82.7597],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.22169727782941, "stroke": true, "weight": 2}
+            ).addTo(map_fea56d04141c464c2a3ccb773c8c413f);
+        
+    
+        var popup_8f166921127dda03475430177f578c2a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_89e7ae7d20f112a272f36848263fd56e = $(`<div id="html_89e7ae7d20f112a272f36848263fd56e" style="width: 100.0%; height: 100.0%;">     <b>Clearwater</b><br/>     Mean Price: $1,476.13<br/>     Median Price: $448.09<br/>     # Records: 1,842<br/>     # Hospitals: 1842<br/>     # CPT Types: 7     </div>`)[0];
+                popup_8f166921127dda03475430177f578c2a.setContent(html_89e7ae7d20f112a272f36848263fd56e);
+            
+        
+
+        circle_marker_87e1b1eb99c8d0c6481d8cbb6527fd8c.bindPopup(popup_8f166921127dda03475430177f578c2a)
+        ;
+
+        
+    
+    
+            var circle_marker_33dcdc609f988f36120870f7f7ebb868 = L.circleMarker(
+                [29.2108, -81.0228],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 29.884852315065423, "stroke": true, "weight": 2}
+            ).addTo(map_fea56d04141c464c2a3ccb773c8c413f);
+        
+    
+        var popup_88ff2046db8e85087057ba8be6cf2421 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5e925f0519bca2b76256d2b6b3e996cd = $(`<div id="html_5e925f0519bca2b76256d2b6b3e996cd" style="width: 100.0%; height: 100.0%;">     <b>Daytona Beach</b><br/>     Mean Price: $3,594.97<br/>     Median Price: $828.50<br/>     # Records: 1,000<br/>     # Hospitals: 1000<br/>     # CPT Types: 7     </div>`)[0];
+                popup_88ff2046db8e85087057ba8be6cf2421.setContent(html_5e925f0519bca2b76256d2b6b3e996cd);
+            
+        
+
+        circle_marker_33dcdc609f988f36120870f7f7ebb868.bindPopup(popup_88ff2046db8e85087057ba8be6cf2421)
+        ;
+
+        
+    
+    
+            var circle_marker_b16cf2deae93b2a50af085bcc702ca91 = L.circleMarker(
+                [26.9542, -82.3634],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.657744130747716, "stroke": true, "weight": 2}
+            ).addTo(map_fea56d04141c464c2a3ccb773c8c413f);
+        
+    
+        var popup_3b3b2f8fc131058180830cdc1e78bed1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dd9ba35de2188793b264ac80c6085ebf = $(`<div id="html_dd9ba35de2188793b264ac80c6085ebf" style="width: 100.0%; height: 100.0%;">     <b>ENGLEWOOD</b><br/>     Mean Price: $2,953.73<br/>     Median Price: $315.45<br/>     # Records: 475<br/>     # Hospitals: 475<br/>     # CPT Types: 7     </div>`)[0];
+                popup_3b3b2f8fc131058180830cdc1e78bed1.setContent(html_dd9ba35de2188793b264ac80c6085ebf);
+            
+        
+
+        circle_marker_b16cf2deae93b2a50af085bcc702ca91.bindPopup(popup_3b3b2f8fc131058180830cdc1e78bed1)
+        ;
+
+        
+    
+    
+            var circle_marker_e6cd961c4bdcbc4b700d832a2c345b43 = L.circleMarker(
+                [30.4074, -86.6191],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.78614823886199, "stroke": true, "weight": 2}
+            ).addTo(map_fea56d04141c464c2a3ccb773c8c413f);
+        
+    
+        var popup_a57146584504c0a76847ed3e3b61458a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_435974f8fd08a92b0727efb08b6b846a = $(`<div id="html_435974f8fd08a92b0727efb08b6b846a" style="width: 100.0%; height: 100.0%;">     <b>FT WALTON BEACH</b><br/>     Mean Price: $2,581.83<br/>     Median Price: $589.72<br/>     # Records: 478<br/>     # Hospitals: 478<br/>     # CPT Types: 7     </div>`)[0];
+                popup_a57146584504c0a76847ed3e3b61458a.setContent(html_435974f8fd08a92b0727efb08b6b846a);
+            
+        
+
+        circle_marker_e6cd961c4bdcbc4b700d832a2c345b43.bindPopup(popup_a57146584504c0a76847ed3e3b61458a)
+        ;
+
+        
+    
+    
+            var circle_marker_bbbeb1ddf2e6f00348e28a7f9b9dc003 = L.circleMarker(
+                [30.3322, -81.6557],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.13806775710799, "stroke": true, "weight": 2}
+            ).addTo(map_fea56d04141c464c2a3ccb773c8c413f);
+        
+    
+        var popup_9c5e0f8febedca185efef700ba66ce91 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_972e877b64507158db70a5ff3f44fe71 = $(`<div id="html_972e877b64507158db70a5ff3f44fe71" style="width: 100.0%; height: 100.0%;">     <b>Jacksonville</b><br/>     Mean Price: $2,055.63<br/>     Median Price: $758.40<br/>     # Records: 2,353<br/>     # Hospitals: 2353<br/>     # CPT Types: 6     </div>`)[0];
+                popup_9c5e0f8febedca185efef700ba66ce91.setContent(html_972e877b64507158db70a5ff3f44fe71);
+            
+        
+
+        circle_marker_bbbeb1ddf2e6f00348e28a7f9b9dc003.bindPopup(popup_9c5e0f8febedca185efef700ba66ce91)
+        ;
+
+        
+    
+    
+            var circle_marker_46d3159ef97b73d4062869d8793bd7eb = L.circleMarker(
+                [28.5383, -81.3792],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 45.0, "stroke": true, "weight": 2}
+            ).addTo(map_fea56d04141c464c2a3ccb773c8c413f);
+        
+    
+        var popup_0a88794c910b23184b8c0073fd5dc9b6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d95e491e1df8531499c5f268a4e9cd83 = $(`<div id="html_d95e491e1df8531499c5f268a4e9cd83" style="width: 100.0%; height: 100.0%;">     <b>Orlando</b><br/>     Mean Price: $6,598.46<br/>     Median Price: $2,777.00<br/>     # Records: 1,230<br/>     # Hospitals: 1230<br/>     # CPT Types: 7     </div>`)[0];
+                popup_0a88794c910b23184b8c0073fd5dc9b6.setContent(html_d95e491e1df8531499c5f268a4e9cd83);
+            
+        
+
+        circle_marker_46d3159ef97b73d4062869d8793bd7eb.bindPopup(popup_0a88794c910b23184b8c0073fd5dc9b6)
+        ;
+
+        
+    
+    
+            var circle_marker_b825db157d1bf0e99422afea60012187 = L.circleMarker(
+                [26.9736, -82.0912],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.756105081920175, "stroke": true, "weight": 2}
+            ).addTo(map_fea56d04141c464c2a3ccb773c8c413f);
+        
+    
+        var popup_2e1cbaa65e82bcdabf961e1ebfd0de6f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0e11b962f667099bce00372d303df7f3 = $(`<div id="html_0e11b962f667099bce00372d303df7f3" style="width: 100.0%; height: 100.0%;">     <b>PORT CHARLOTTE</b><br/>     Mean Price: $2,377.15<br/>     Median Price: $126.89<br/>     # Records: 896<br/>     # Hospitals: 896<br/>     # CPT Types: 7     </div>`)[0];
+                popup_2e1cbaa65e82bcdabf961e1ebfd0de6f.setContent(html_0e11b962f667099bce00372d303df7f3);
+            
+        
+
+        circle_marker_b825db157d1bf0e99422afea60012187.bindPopup(popup_2e1cbaa65e82bcdabf961e1ebfd0de6f)
+        ;
+
+        
+    
+    
+            var circle_marker_86f40bc156749fc67901e6da269601cd = L.circleMarker(
+                [29.0465, -81.1988],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.404797832567453, "stroke": true, "weight": 2}
+            ).addTo(map_fea56d04141c464c2a3ccb773c8c413f);
+        
+    
+        var popup_dfb1873beb557b1c64400e7fbdb1516e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bf12546e7429452ba2ed089540516ee1 = $(`<div id="html_bf12546e7429452ba2ed089540516ee1" style="width: 100.0%; height: 100.0%;">     <b>Palm Coast</b><br/>     Mean Price: $1,711.22<br/>     Median Price: $742.50<br/>     # Records: 4,300<br/>     # Hospitals: 4300<br/>     # CPT Types: 7     </div>`)[0];
+                popup_dfb1873beb557b1c64400e7fbdb1516e.setContent(html_bf12546e7429452ba2ed089540516ee1);
+            
+        
+
+        circle_marker_86f40bc156749fc67901e6da269601cd.bindPopup(popup_dfb1873beb557b1c64400e7fbdb1516e)
+        ;
+
+        
+    
+    
+            var circle_marker_3015055ad48348b462cda5eb553fc432 = L.circleMarker(
+                [27.7676, -82.6403],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.22169727782941, "stroke": true, "weight": 2}
+            ).addTo(map_fea56d04141c464c2a3ccb773c8c413f);
+        
+    
+        var popup_ce3c766afe2c5545ca6d4fc034869eef = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7bf92830ab0350b11101cf61dc27484f = $(`<div id="html_7bf92830ab0350b11101cf61dc27484f" style="width: 100.0%; height: 100.0%;">     <b>Petersburg</b><br/>     Mean Price: $1,476.13<br/>     Median Price: $448.09<br/>     # Records: 1,842<br/>     # Hospitals: 1842<br/>     # CPT Types: 7     </div>`)[0];
+                popup_ce3c766afe2c5545ca6d4fc034869eef.setContent(html_7bf92830ab0350b11101cf61dc27484f);
+            
+        
+
+        circle_marker_3015055ad48348b462cda5eb553fc432.bindPopup(popup_ce3c766afe2c5545ca6d4fc034869eef)
+        ;
+
+        
+    
+    
+            var circle_marker_d9c4fa9ab07babf2c2f041a8b126e09c = L.circleMarker(
+                [26.9736, -82.0912],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.0, "stroke": true, "weight": 2}
+            ).addTo(map_fea56d04141c464c2a3ccb773c8c413f);
+        
+    
+        var popup_ac87365acee416d0bb4a7b3ae001ce9c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_183f537054542a79a34234deca3d110c = $(`<div id="html_183f537054542a79a34234deca3d110c" style="width: 100.0%; height: 100.0%;">     <b>Port Charlotte</b><br/>     Mean Price: $637.25<br/>     Median Price: $381.48<br/>     # Records: 1,009<br/>     # Hospitals: 1009<br/>     # CPT Types: 5     </div>`)[0];
+                popup_ac87365acee416d0bb4a7b3ae001ce9c.setContent(html_183f537054542a79a34234deca3d110c);
+            
+        
+
+        circle_marker_d9c4fa9ab07babf2c2f041a8b126e09c.bindPopup(popup_ac87365acee416d0bb4a7b3ae001ce9c)
+        ;
+
+        
+    
+    
+            var circle_marker_977bed8046c81d4d88c82cd48d8af9fd = L.circleMarker(
+                [28.7805, -81.2753],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 31.332631553533645, "stroke": true, "weight": 2}
+            ).addTo(map_fea56d04141c464c2a3ccb773c8c413f);
+        
+    
+        var popup_803ab99279fa16cae2dfdfadb851b141 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_78b6bf7087b6a2f326615ad01180d41a = $(`<div id="html_78b6bf7087b6a2f326615ad01180d41a" style="width: 100.0%; height: 100.0%;">     <b>SANFORD</b><br/>     Mean Price: $3,882.66<br/>     Median Price: $1,261.60<br/>     # Records: 386<br/>     # Hospitals: 386<br/>     # CPT Types: 7     </div>`)[0];
+                popup_803ab99279fa16cae2dfdfadb851b141.setContent(html_78b6bf7087b6a2f326615ad01180d41a);
+            
+        
+
+        circle_marker_977bed8046c81d4d88c82cd48d8af9fd.bindPopup(popup_803ab99279fa16cae2dfdfadb851b141)
+        ;
+
+        
+    
+    
+            var circle_marker_b180bad2e743c2bd5d9e4acf1a4a47ed = L.circleMarker(
+                [30.4383, -84.2807],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.71728553583099, "stroke": true, "weight": 2}
+            ).addTo(map_fea56d04141c464c2a3ccb773c8c413f);
+        
+    
+        var popup_44b3870df38f831ab07985bcb76d8f3e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a0bdebc435e3b26a61ec956ec0c89080 = $(`<div id="html_a0bdebc435e3b26a61ec956ec0c89080" style="width: 100.0%; height: 100.0%;">     <b>TALLAHASSEE</b><br/>     Mean Price: $2,170.73<br/>     Median Price: $719.44<br/>     # Records: 669<br/>     # Hospitals: 669<br/>     # CPT Types: 7     </div>`)[0];
+                popup_44b3870df38f831ab07985bcb76d8f3e.setContent(html_a0bdebc435e3b26a61ec956ec0c89080);
+            
+        
+
+        circle_marker_b180bad2e743c2bd5d9e4acf1a4a47ed.bindPopup(popup_44b3870df38f831ab07985bcb76d8f3e)
+        ;
+
+        
+    
+    
+            var circle_marker_444a448d20bc1896b163d457686ff151 = L.circleMarker(
+                [27.9506, -82.4572],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.36583219632395, "stroke": true, "weight": 2}
+            ).addTo(map_fea56d04141c464c2a3ccb773c8c413f);
+        
+    
+        var popup_101fc5e66f55917e43cf28ac22eb8e96 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_85b92476e8a9bbd7329645f5757e4620 = $(`<div id="html_85b92476e8a9bbd7329645f5757e4620" style="width: 100.0%; height: 100.0%;">     <b>Tampa</b><br/>     Mean Price: $1,902.18<br/>     Median Price: $837.00<br/>     # Records: 9,802<br/>     # Hospitals: 9802<br/>     # CPT Types: 7     </div>`)[0];
+                popup_101fc5e66f55917e43cf28ac22eb8e96.setContent(html_85b92476e8a9bbd7329645f5757e4620);
+            
+        
+
+        circle_marker_444a448d20bc1896b163d457686ff151.bindPopup(popup_101fc5e66f55917e43cf28ac22eb8e96)
+        ;
+
+        
+    
+    
+            var circle_marker_3c1b5e22a37d7149f2326a9ded6ef8f0 = L.circleMarker(
+                [28.1447, -82.7539],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 44.93138339781696, "stroke": true, "weight": 2}
+            ).addTo(map_fea56d04141c464c2a3ccb773c8c413f);
+        
+    
+        var popup_c031a18009a8655985717c05297a421d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_02255bfce35a699e1f0732a10d705642 = $(`<div id="html_02255bfce35a699e1f0732a10d705642" style="width: 100.0%; height: 100.0%;">     <b>Tarpon Springs</b><br/>     Mean Price: $6,584.83<br/>     Median Price: $934.00<br/>     # Records: 3,850<br/>     # Hospitals: 3850<br/>     # CPT Types: 7     </div>`)[0];
+                popup_c031a18009a8655985717c05297a421d.setContent(html_02255bfce35a699e1f0732a10d705642);
+            
+        
+
+        circle_marker_3c1b5e22a37d7149f2326a9ded6ef8f0.bindPopup(popup_c031a18009a8655985717c05297a421d)
+        ;
+
+        
+    
+    
+            var circle_marker_4849799c3182473cba0833f8caae84d4 = L.circleMarker(
+                [28.8062, -81.7886],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.612587167572677, "stroke": true, "weight": 2}
+            ).addTo(map_fea56d04141c464c2a3ccb773c8c413f);
+        
+    
+        var popup_2a9fb22b9400d503c7277cc0b5d151dc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_47fe22bcbc5433c6079cc2aeaebba771 = $(`<div id="html_47fe22bcbc5433c6079cc2aeaebba771" style="width: 100.0%; height: 100.0%;">     <b>Tavares</b><br/>     Mean Price: $2,149.92<br/>     Median Price: $871.00<br/>     # Records: 4,252<br/>     # Hospitals: 4252<br/>     # CPT Types: 7     </div>`)[0];
+                popup_2a9fb22b9400d503c7277cc0b5d151dc.setContent(html_47fe22bcbc5433c6079cc2aeaebba771);
+            
+        
+
+        circle_marker_4849799c3182473cba0833f8caae84d4.bindPopup(popup_2a9fb22b9400d503c7277cc0b5d151dc)
+        ;
+
+        
+    
+    
+            var circle_marker_186a270ee05aa187ad82ea933d6b0c45 = L.circleMarker(
+                [28.2364, -82.1854],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.66576910247304, "stroke": true, "weight": 2}
+            ).addTo(map_fea56d04141c464c2a3ccb773c8c413f);
+        
+    
+        var popup_0c381e9d4ec5ce318c2873ccb48784e3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_651755a0527be1e5fadceb515b4e9687 = $(`<div id="html_651755a0527be1e5fadceb515b4e9687" style="width: 100.0%; height: 100.0%;">     <b>Zephyrhills</b><br/>     Mean Price: $2,160.49<br/>     Median Price: $941.00<br/>     # Records: 4,050<br/>     # Hospitals: 4050<br/>     # CPT Types: 7     </div>`)[0];
+                popup_0c381e9d4ec5ce318c2873ccb48784e3.setContent(html_651755a0527be1e5fadceb515b4e9687);
+            
+        
+
+        circle_marker_186a270ee05aa187ad82ea933d6b0c45.bindPopup(popup_0c381e9d4ec5ce318c2873ccb48784e3)
+        ;
+
+        
+    
+</script>
+</html>

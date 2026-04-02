@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6ce20f3a556f8f83f26ecc256c6aded0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+                 <div style="position: fixed; 
+                         top: 10px; left: 50px; width: 600px; height: 100px; 
+                         background-color: white; border:2px solid grey; z-index:9999; 
+                         font-size:14px; font-weight: bold; padding: 10px">
+                 Procedure 2/6: Price Variation<br/>
+                 <span style="font-size: 12px;">Clinical Brachytherapy Radiation Treatment...</span><br/>
+                 <span style="font-size: 11px; font-weight: normal;">Green = stable, Red = chaotic</span>
+                 </div>
+                 
+    
+            <div class="folium-map" id="map_6ce20f3a556f8f83f26ecc256c6aded0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6ce20f3a556f8f83f26ecc256c6aded0 = L.map(
+                "map_6ce20f3a556f8f83f26ecc256c6aded0",
+                {
+                    center: [27.5, -81.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f6799b3b068f06f12d6c781c2e9b0183 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f6799b3b068f06f12d6c781c2e9b0183.addTo(map_6ce20f3a556f8f83f26ecc256c6aded0);
+        
+    
+            var circle_marker_62f630f1c9f1a43f5b89de5e048e7283 = L.circleMarker(
+                [27.4891, -82.5784],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.361557845857636, "stroke": true, "weight": 2}
+            ).addTo(map_6ce20f3a556f8f83f26ecc256c6aded0);
+        
+    
+        var popup_089a5afdd57be2471626d56adfb9f95f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_48c7112b4a2ba68acb350546cda8838c = $(`<div id="html_48c7112b4a2ba68acb350546cda8838c" style="width: 100.0%; height: 100.0%;">         <b>BRADENTON</b><br/>         CV%: 96.3%<br/>         Mean: $1,915.50<br/>         Records: 142         </div>`)[0];
+                popup_089a5afdd57be2471626d56adfb9f95f.setContent(html_48c7112b4a2ba68acb350546cda8838c);
+            
+        
+
+        circle_marker_62f630f1c9f1a43f5b89de5e048e7283.bindPopup(popup_089a5afdd57be2471626d56adfb9f95f)
+        ;
+
+        
+    
+    
+            var circle_marker_e506a04bf2fff838a106c1a5428d9746 = L.circleMarker(
+                [27.8958, -81.7738],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.978452913528512, "stroke": true, "weight": 2}
+            ).addTo(map_6ce20f3a556f8f83f26ecc256c6aded0);
+        
+    
+        var popup_d83b2faeefeb623436126e665aadb8a2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fd2c94102e621bd9b204c6fafe9ceca3 = $(`<div id="html_fd2c94102e621bd9b204c6fafe9ceca3" style="width: 100.0%; height: 100.0%;">         <b>Bartow</b><br/>         CV%: 113.8%<br/>         Mean: $744.54<br/>         Records: 332         </div>`)[0];
+                popup_d83b2faeefeb623436126e665aadb8a2.setContent(html_fd2c94102e621bd9b204c6fafe9ceca3);
+            
+        
+
+        circle_marker_e506a04bf2fff838a106c1a5428d9746.bindPopup(popup_d83b2faeefeb623436126e665aadb8a2)
+        ;
+
+        
+    
+    
+            var circle_marker_7ec8b11b9ee9ff2445b5e43573099131 = L.circleMarker(
+                [27.9755, -82.7597],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.187977801687525, "stroke": true, "weight": 2}
+            ).addTo(map_6ce20f3a556f8f83f26ecc256c6aded0);
+        
+    
+        var popup_6641e8c9de3f1a6ba1819a02a3c264b3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8f04e035ad66ce6515acc4cf1d3e22e9 = $(`<div id="html_8f04e035ad66ce6515acc4cf1d3e22e9" style="width: 100.0%; height: 100.0%;">         <b>Clearwater</b><br/>         CV%: 119.7%<br/>         Mean: $1,184.05<br/>         Records: 530         </div>`)[0];
+                popup_6641e8c9de3f1a6ba1819a02a3c264b3.setContent(html_8f04e035ad66ce6515acc4cf1d3e22e9);
+            
+        
+
+        circle_marker_7ec8b11b9ee9ff2445b5e43573099131.bindPopup(popup_6641e8c9de3f1a6ba1819a02a3c264b3)
+        ;
+
+        
+    
+    
+            var circle_marker_2ed1ce9fa4c4b1f0be7289814779d05d = L.circleMarker(
+                [29.2108, -81.0228],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.107239934311115, "stroke": true, "weight": 2}
+            ).addTo(map_6ce20f3a556f8f83f26ecc256c6aded0);
+        
+    
+        var popup_6d9e7ec5917e45305fa137d1adce0327 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8f9c33e56f86efd1c59ae2c40e0d3d7d = $(`<div id="html_8f9c33e56f86efd1c59ae2c40e0d3d7d" style="width: 100.0%; height: 100.0%;">         <b>Daytona Beach</b><br/>         CV%: 60.9%<br/>         Mean: $1,127.11<br/>         Records: 240         </div>`)[0];
+                popup_6d9e7ec5917e45305fa137d1adce0327.setContent(html_8f9c33e56f86efd1c59ae2c40e0d3d7d);
+            
+        
+
+        circle_marker_2ed1ce9fa4c4b1f0be7289814779d05d.bindPopup(popup_6d9e7ec5917e45305fa137d1adce0327)
+        ;
+
+        
+    
+    
+            var circle_marker_7d8f5cabecedcbe41df3648205db51ec = L.circleMarker(
+                [26.9542, -82.3634],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.714423240274082, "stroke": true, "weight": 2}
+            ).addTo(map_6ce20f3a556f8f83f26ecc256c6aded0);
+        
+    
+        var popup_d9b9c76db18cd4d060f372cd17d853e9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_eb5ced9fc92483dd4727ae461a9d4807 = $(`<div id="html_eb5ced9fc92483dd4727ae461a9d4807" style="width: 100.0%; height: 100.0%;">         <b>ENGLEWOOD</b><br/>         CV%: 106.3%<br/>         Mean: $3,425.00<br/>         Records: 2         </div>`)[0];
+                popup_d9b9c76db18cd4d060f372cd17d853e9.setContent(html_eb5ced9fc92483dd4727ae461a9d4807);
+            
+        
+
+        circle_marker_7d8f5cabecedcbe41df3648205db51ec.bindPopup(popup_d9b9c76db18cd4d060f372cd17d853e9)
+        ;
+
+        
+    
+    
+            var circle_marker_8b38d61f34f332d32a6bdfab68edefd9 = L.circleMarker(
+                [30.4074, -86.6191],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": NaN, "stroke": true, "weight": 2}
+            ).addTo(map_6ce20f3a556f8f83f26ecc256c6aded0);
+        
+    
+        var popup_94feea6754251457703ba147d72ecc75 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2be8301c464260c30c3704a637c10813 = $(`<div id="html_2be8301c464260c30c3704a637c10813" style="width: 100.0%; height: 100.0%;">         <b>FT WALTON BEACH</b><br/>         CV%: nan%<br/>         Mean: $6,000.00<br/>         Records: 1         </div>`)[0];
+                popup_94feea6754251457703ba147d72ecc75.setContent(html_2be8301c464260c30c3704a637c10813);
+            
+        
+
+        circle_marker_8b38d61f34f332d32a6bdfab68edefd9.bindPopup(popup_94feea6754251457703ba147d72ecc75)
+        ;
+
+        
+    
+    
+            var circle_marker_b6a1e5399c8d81093877923501452c15 = L.circleMarker(
+                [30.3322, -81.6557],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.87899937708817, "stroke": true, "weight": 2}
+            ).addTo(map_6ce20f3a556f8f83f26ecc256c6aded0);
+        
+    
+        var popup_cd0d015e0dc3ca48b385a4100fb01ae6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8dcbe6693618cf6f29f5cc5475c1ceb8 = $(`<div id="html_8dcbe6693618cf6f29f5cc5475c1ceb8" style="width: 100.0%; height: 100.0%;">         <b>Jacksonville</b><br/>         CV%: 111.0%<br/>         Mean: $1,603.93<br/>         Records: 429         </div>`)[0];
+                popup_cd0d015e0dc3ca48b385a4100fb01ae6.setContent(html_8dcbe6693618cf6f29f5cc5475c1ceb8);
+            
+        
+
+        circle_marker_b6a1e5399c8d81093877923501452c15.bindPopup(popup_cd0d015e0dc3ca48b385a4100fb01ae6)
+        ;
+
+        
+    
+    
+            var circle_marker_81b3b1c00d3da3d8ab5005768e79b8b1 = L.circleMarker(
+                [28.5383, -81.3792],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.902514298657907, "stroke": true, "weight": 2}
+            ).addTo(map_6ce20f3a556f8f83f26ecc256c6aded0);
+        
+    
+        var popup_1b6206a59948d53eef2e14293f263c8b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c3ffc28a1f3bf69f0271346784332963 = $(`<div id="html_c3ffc28a1f3bf69f0271346784332963" style="width: 100.0%; height: 100.0%;">         <b>Orlando</b><br/>         CV%: 83.4%<br/>         Mean: $9,504.00<br/>         Records: 240         </div>`)[0];
+                popup_1b6206a59948d53eef2e14293f263c8b.setContent(html_c3ffc28a1f3bf69f0271346784332963);
+            
+        
+
+        circle_marker_81b3b1c00d3da3d8ab5005768e79b8b1.bindPopup(popup_1b6206a59948d53eef2e14293f263c8b)
+        ;
+
+        
+    
+    
+            var circle_marker_369cb2898cf088ec11692e01178a3359 = L.circleMarker(
+                [26.9736, -82.0912],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.257191800215187, "stroke": true, "weight": 2}
+            ).addTo(map_6ce20f3a556f8f83f26ecc256c6aded0);
+        
+    
+        var popup_3d0ac37fd939879290b409c9480fe9b4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_31b6df244602ff2a82d22a1288e00ad2 = $(`<div id="html_31b6df244602ff2a82d22a1288e00ad2" style="width: 100.0%; height: 100.0%;">         <b>PORT CHARLOTTE</b><br/>         CV%: 149.9%<br/>         Mean: $11,539.10<br/>         Records: 58         </div>`)[0];
+                popup_3d0ac37fd939879290b409c9480fe9b4.setContent(html_31b6df244602ff2a82d22a1288e00ad2);
+            
+        
+
+        circle_marker_369cb2898cf088ec11692e01178a3359.bindPopup(popup_3d0ac37fd939879290b409c9480fe9b4)
+        ;
+
+        
+    
+    
+            var circle_marker_45452fc140b163134c95c20ed89a5ab1 = L.circleMarker(
+                [29.0465, -81.1988],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.300130245200748, "stroke": true, "weight": 2}
+            ).addTo(map_6ce20f3a556f8f83f26ecc256c6aded0);
+        
+    
+        var popup_79ebbb74cd8c46df8e0889901663f5e7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7e7d922ae89f16e41cb6a2a9c7a5719a = $(`<div id="html_7e7d922ae89f16e41cb6a2a9c7a5719a" style="width: 100.0%; height: 100.0%;">         <b>Palm Coast</b><br/>         CV%: 66.4%<br/>         Mean: $914.50<br/>         Records: 1032         </div>`)[0];
+                popup_79ebbb74cd8c46df8e0889901663f5e7.setContent(html_7e7d922ae89f16e41cb6a2a9c7a5719a);
+            
+        
+
+        circle_marker_45452fc140b163134c95c20ed89a5ab1.bindPopup(popup_79ebbb74cd8c46df8e0889901663f5e7)
+        ;
+
+        
+    
+    
+            var circle_marker_5016a478ef0c379cdef1953a57589a90 = L.circleMarker(
+                [27.7676, -82.6403],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.187977801687525, "stroke": true, "weight": 2}
+            ).addTo(map_6ce20f3a556f8f83f26ecc256c6aded0);
+        
+    
+        var popup_718c1e22607ab9d962895ee8804a6fa2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3f281a6673474470d14461fa89b112c9 = $(`<div id="html_3f281a6673474470d14461fa89b112c9" style="width: 100.0%; height: 100.0%;">         <b>Petersburg</b><br/>         CV%: 119.7%<br/>         Mean: $1,184.05<br/>         Records: 530         </div>`)[0];
+                popup_718c1e22607ab9d962895ee8804a6fa2.setContent(html_3f281a6673474470d14461fa89b112c9);
+            
+        
+
+        circle_marker_5016a478ef0c379cdef1953a57589a90.bindPopup(popup_718c1e22607ab9d962895ee8804a6fa2)
+        ;
+
+        
+    
+    
+            var circle_marker_ffe5a2b14457b6b0340d95b133329f3e = L.circleMarker(
+                [28.7805, -81.2753],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.35943428280197, "stroke": true, "weight": 2}
+            ).addTo(map_6ce20f3a556f8f83f26ecc256c6aded0);
+        
+    
+        var popup_0ffed48a6712674fbdb375ca6b8036cb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3b84afecbf0d9798fe81356639c00af3 = $(`<div id="html_3b84afecbf0d9798fe81356639c00af3" style="width: 100.0%; height: 100.0%;">         <b>SANFORD</b><br/>         CV%: 96.3%<br/>         Mean: $1,102.11<br/>         Records: 32         </div>`)[0];
+                popup_0ffed48a6712674fbdb375ca6b8036cb.setContent(html_3b84afecbf0d9798fe81356639c00af3);
+            
+        
+
+        circle_marker_ffe5a2b14457b6b0340d95b133329f3e.bindPopup(popup_0ffed48a6712674fbdb375ca6b8036cb)
+        ;
+
+        
+    
+    
+            var circle_marker_011132a836430436334e2649b0556fe7 = L.circleMarker(
+                [30.4383, -84.2807],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.0, "stroke": true, "weight": 2}
+            ).addTo(map_6ce20f3a556f8f83f26ecc256c6aded0);
+        
+    
+        var popup_644f85f89d7cd1dfb63b2859be77b240 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a81f4a4b239c862280e7e3616b6448cd = $(`<div id="html_a81f4a4b239c862280e7e3616b6448cd" style="width: 100.0%; height: 100.0%;">         <b>TALLAHASSEE</b><br/>         CV%: 57.9%<br/>         Mean: $1,820.93<br/>         Records: 50         </div>`)[0];
+                popup_644f85f89d7cd1dfb63b2859be77b240.setContent(html_a81f4a4b239c862280e7e3616b6448cd);
+            
+        
+
+        circle_marker_011132a836430436334e2649b0556fe7.bindPopup(popup_644f85f89d7cd1dfb63b2859be77b240)
+        ;
+
+        
+    
+    
+            var circle_marker_60857e783713807db7406dcca620af25 = L.circleMarker(
+                [27.9506, -82.4572],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.571790588368538, "stroke": true, "weight": 2}
+            ).addTo(map_6ce20f3a556f8f83f26ecc256c6aded0);
+        
+    
+        var popup_190b85a10f99ca9815587a566aacb798 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bf07df223e5f265c552b8d66d2195a5e = $(`<div id="html_bf07df223e5f265c552b8d66d2195a5e" style="width: 100.0%; height: 100.0%;">         <b>Tampa</b><br/>         CV%: 102.3%<br/>         Mean: $1,558.31<br/>         Records: 1928         </div>`)[0];
+                popup_190b85a10f99ca9815587a566aacb798.setContent(html_bf07df223e5f265c552b8d66d2195a5e);
+            
+        
+
+        circle_marker_60857e783713807db7406dcca620af25.bindPopup(popup_190b85a10f99ca9815587a566aacb798)
+        ;
+
+        
+    
+    
+            var circle_marker_ef7a2b849daaca2d85b06508d9a0d61e = L.circleMarker(
+                [28.1447, -82.7539],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 37.0, "stroke": true, "weight": 2}
+            ).addTo(map_6ce20f3a556f8f83f26ecc256c6aded0);
+        
+    
+        var popup_de6d5b819616e2bb8e5bb5f12ed4117c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1e243f04d4763dfb1e30e7385f411672 = $(`<div id="html_1e243f04d4763dfb1e30e7385f411672" style="width: 100.0%; height: 100.0%;">         <b>Tarpon Springs</b><br/>         CV%: 764.2%<br/>         Mean: $6,327.07<br/>         Records: 924         </div>`)[0];
+                popup_de6d5b819616e2bb8e5bb5f12ed4117c.setContent(html_1e243f04d4763dfb1e30e7385f411672);
+            
+        
+
+        circle_marker_ef7a2b849daaca2d85b06508d9a0d61e.bindPopup(popup_de6d5b819616e2bb8e5bb5f12ed4117c)
+        ;
+
+        
+    
+    
+            var circle_marker_469ebd330892b2531e24ce15f59a802a = L.circleMarker(
+                [28.8062, -81.7886],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.570927006059234, "stroke": true, "weight": 2}
+            ).addTo(map_6ce20f3a556f8f83f26ecc256c6aded0);
+        
+    
+        var popup_40942117d2736bae9bdd09c9bda619e2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9b5f2b9b5c7a00f6b52b3ae541fade05 = $(`<div id="html_9b5f2b9b5c7a00f6b52b3ae541fade05" style="width: 100.0%; height: 100.0%;">         <b>Tavares</b><br/>         CV%: 130.5%<br/>         Mean: $1,949.31<br/>         Records: 988         </div>`)[0];
+                popup_40942117d2736bae9bdd09c9bda619e2.setContent(html_9b5f2b9b5c7a00f6b52b3ae541fade05);
+            
+        
+
+        circle_marker_469ebd330892b2531e24ce15f59a802a.bindPopup(popup_40942117d2736bae9bdd09c9bda619e2)
+        ;
+
+        
+    
+    
+            var circle_marker_91c02f9f48489f5b8aa42466dabaaa3d = L.circleMarker(
+                [28.2364, -82.1854],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.38916416558129, "stroke": true, "weight": 2}
+            ).addTo(map_6ce20f3a556f8f83f26ecc256c6aded0);
+        
+    
+        var popup_480edd09128ef018ecb260dd283d4a43 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6331ce7fc2511edef836d9771f94a6be = $(`<div id="html_6331ce7fc2511edef836d9771f94a6be" style="width: 100.0%; height: 100.0%;">         <b>Zephyrhills</b><br/>         CV%: 97.1%<br/>         Mean: $1,728.97<br/>         Records: 972         </div>`)[0];
+                popup_480edd09128ef018ecb260dd283d4a43.setContent(html_6331ce7fc2511edef836d9771f94a6be);
+            
+        
+
+        circle_marker_91c02f9f48489f5b8aa42466dabaaa3d.bindPopup(popup_480edd09128ef018ecb260dd283d4a43)
+        ;
+
+        
+    
+</script>
+</html>

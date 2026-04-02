@@ -1,0 +1,9 @@
+Metric,High_Var_Median,Low_Var_Median,Difference,P_Value,Significant
+Pct_Income_100K_Plus,38.3,35.3,3.0,0.5133,  NO
+Pct_65Plus,27.2,17.7,9.5,0.4879,  NO
+Pct_Private_Insurance,77.5,79.3,-1.8,0.2864,  NO
+Pct_Public_Insurance,25.2,22.9,2.3,0.6049,  NO
+Pct_Uninsured,8.0,8.1,-0.1,0.7156,  NO
+Total_Population,140351.0,127327.0,13024.0,0.6529,  NO
+Pct_Hispanic,15.6,15.1,0.5,0.2965,  NO
+Diversity_Index,40.3,45.4,-5.1,0.8343,  NO

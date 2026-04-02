@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a1674fd503b90c40000252e3f1099d1a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+             <div style="position: fixed; 
+                     top: 10px; left: 50px; width: 600px; height: 100px; 
+                     background-color: white; border:2px solid grey; z-index:9999; 
+                     font-size:16px; font-weight: bold; padding: 10px">
+             Map #5: Data Coverage & Market Size<br/>
+             Number of Records by City<br/>
+             <span style="font-size: 12px; font-weight: normal;">Bigger circle = more data/larger market</span>
+             </div>
+             
+    
+            <div class="folium-map" id="map_a1674fd503b90c40000252e3f1099d1a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a1674fd503b90c40000252e3f1099d1a = L.map(
+                "map_a1674fd503b90c40000252e3f1099d1a",
+                {
+                    center: [27.5, -81.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d8a62dcd2f9d6ce9e81634f9a55898e2 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d8a62dcd2f9d6ce9e81634f9a55898e2.addTo(map_a1674fd503b90c40000252e3f1099d1a);
+        
+    
+            var circle_marker_33fa262a328404df91611fc2bd9ba682 = L.circleMarker(
+                [27.4891, -82.5784],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.063084112149532, "stroke": true, "weight": 2}
+            ).addTo(map_a1674fd503b90c40000252e3f1099d1a);
+        
+    
+        var popup_9bd8b5b7c4af694a85c57c5b5fec421c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_11244a8f9a761a87ac9699ef17387891 = $(`<div id="html_11244a8f9a761a87ac9699ef17387891" style="width: 100.0%; height: 100.0%;">     <b>BRADENTON</b><br/>     Records: 672<br/>     Hospitals: 672<br/>     CPT Types: 7<br/>     Market Size: Small     </div>`)[0];
+                popup_9bd8b5b7c4af694a85c57c5b5fec421c.setContent(html_11244a8f9a761a87ac9699ef17387891);
+            
+        
+
+        circle_marker_33fa262a328404df91611fc2bd9ba682.bindPopup(popup_9bd8b5b7c4af694a85c57c5b5fec421c)
+        ;
+
+        
+    
+    
+            var circle_marker_a2a1be0fc44e6143691d86f4e16ea572 = L.circleMarker(
+                [27.8958, -81.7738],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.758071367884451, "stroke": true, "weight": 2}
+            ).addTo(map_a1674fd503b90c40000252e3f1099d1a);
+        
+    
+        var popup_549dcf9bfaa744c181847ecff2783659 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b5af1a4b598e283167b8985afe538d98 = $(`<div id="html_b5af1a4b598e283167b8985afe538d98" style="width: 100.0%; height: 100.0%;">     <b>Bartow</b><br/>     Records: 1,128<br/>     Hospitals: 1128<br/>     CPT Types: 7<br/>     Market Size: Medium     </div>`)[0];
+                popup_549dcf9bfaa744c181847ecff2783659.setContent(html_b5af1a4b598e283167b8985afe538d98);
+            
+        
+
+        circle_marker_a2a1be0fc44e6143691d86f4e16ea572.bindPopup(popup_549dcf9bfaa744c181847ecff2783659)
+        ;
+
+        
+    
+    
+            var circle_marker_2eb573190bad2ac1833231130d2e23ce = L.circleMarker(
+                [27.9755, -82.7597],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.412064570943077, "stroke": true, "weight": 2}
+            ).addTo(map_a1674fd503b90c40000252e3f1099d1a);
+        
+    
+        var popup_78d6c498e59b6c3287547fd8a6b85959 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9a4c8dfb34246d065e4c2662744ec5b2 = $(`<div id="html_9a4c8dfb34246d065e4c2662744ec5b2" style="width: 100.0%; height: 100.0%;">     <b>Clearwater</b><br/>     Records: 1,842<br/>     Hospitals: 1842<br/>     CPT Types: 7<br/>     Market Size: Medium     </div>`)[0];
+                popup_78d6c498e59b6c3287547fd8a6b85959.setContent(html_9a4c8dfb34246d065e4c2662744ec5b2);
+            
+        
+
+        circle_marker_2eb573190bad2ac1833231130d2e23ce.bindPopup(popup_78d6c498e59b6c3287547fd8a6b85959)
+        ;
+
+        
+    
+    
+            var circle_marker_e1a49e7f46a529e97af23095fe87497f = L.circleMarker(
+                [29.2108, -81.0228],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.282285471537808, "stroke": true, "weight": 2}
+            ).addTo(map_a1674fd503b90c40000252e3f1099d1a);
+        
+    
+        var popup_199cfc8093459f751b3d7402d7fd11d9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6667fd07bb9139c7c054e435a4a117b6 = $(`<div id="html_6667fd07bb9139c7c054e435a4a117b6" style="width: 100.0%; height: 100.0%;">     <b>Daytona Beach</b><br/>     Records: 1,000<br/>     Hospitals: 1000<br/>     CPT Types: 7<br/>     Market Size: Small     </div>`)[0];
+                popup_199cfc8093459f751b3d7402d7fd11d9.setContent(html_6667fd07bb9139c7c054e435a4a117b6);
+            
+        
+
+        circle_marker_e1a49e7f46a529e97af23095fe87497f.bindPopup(popup_199cfc8093459f751b3d7402d7fd11d9)
+        ;
+
+        
+    
+    
+            var circle_marker_0648949a8e23ca40cee0be1e30c70498 = L.circleMarker(
+                [26.9542, -82.3634],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.330819881053525, "stroke": true, "weight": 2}
+            ).addTo(map_a1674fd503b90c40000252e3f1099d1a);
+        
+    
+        var popup_f89be4daa2a03853fe629c3345514e0f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_437f3d9f2c1a0ab0c5e47041fe74c241 = $(`<div id="html_437f3d9f2c1a0ab0c5e47041fe74c241" style="width: 100.0%; height: 100.0%;">     <b>ENGLEWOOD</b><br/>     Records: 475<br/>     Hospitals: 475<br/>     CPT Types: 7<br/>     Market Size: Small     </div>`)[0];
+                popup_f89be4daa2a03853fe629c3345514e0f.setContent(html_437f3d9f2c1a0ab0c5e47041fe74c241);
+            
+        
+
+        circle_marker_0648949a8e23ca40cee0be1e30c70498.bindPopup(popup_f89be4daa2a03853fe629c3345514e0f)
+        ;
+
+        
+    
+    
+            var circle_marker_b7c184a157ac8ac196193c10f6b62f02 = L.circleMarker(
+                [30.4074, -86.6191],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.34197111299915, "stroke": true, "weight": 2}
+            ).addTo(map_a1674fd503b90c40000252e3f1099d1a);
+        
+    
+        var popup_c7363a8d74cee43942da433c3bbd0c73 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5ec0196e7b84bd7b89423d1f0794d905 = $(`<div id="html_5ec0196e7b84bd7b89423d1f0794d905" style="width: 100.0%; height: 100.0%;">     <b>FT WALTON BEACH</b><br/>     Records: 478<br/>     Hospitals: 478<br/>     CPT Types: 7<br/>     Market Size: Small     </div>`)[0];
+                popup_c7363a8d74cee43942da433c3bbd0c73.setContent(html_5ec0196e7b84bd7b89423d1f0794d905);
+            
+        
+
+        circle_marker_b7c184a157ac8ac196193c10f6b62f02.bindPopup(popup_c7363a8d74cee43942da433c3bbd0c73)
+        ;
+
+        
+    
+    
+            var circle_marker_6fc6829daffdd08fdbc67c5561c88ed6 = L.circleMarker(
+                [30.3322, -81.6557],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.311491079014445, "stroke": true, "weight": 2}
+            ).addTo(map_a1674fd503b90c40000252e3f1099d1a);
+        
+    
+        var popup_b48e38f02c10108bd473222486d0157e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_10de6fc352c3d02c972e7b87785adff8 = $(`<div id="html_10de6fc352c3d02c972e7b87785adff8" style="width: 100.0%; height: 100.0%;">     <b>Jacksonville</b><br/>     Records: 2,353<br/>     Hospitals: 2353<br/>     CPT Types: 6<br/>     Market Size: Medium     </div>`)[0];
+                popup_b48e38f02c10108bd473222486d0157e.setContent(html_10de6fc352c3d02c972e7b87785adff8);
+            
+        
+
+        circle_marker_6fc6829daffdd08fdbc67c5561c88ed6.bindPopup(popup_b48e38f02c10108bd473222486d0157e)
+        ;
+
+        
+    
+    
+            var circle_marker_faf2b59b526b7e42280eaa52b7636b6c = L.circleMarker(
+                [28.5383, -81.3792],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.137213254035684, "stroke": true, "weight": 2}
+            ).addTo(map_a1674fd503b90c40000252e3f1099d1a);
+        
+    
+        var popup_7d735e30e48076636e3b770d884b7142 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_79bae3bbae5920b0a17766ce858d3317 = $(`<div id="html_79bae3bbae5920b0a17766ce858d3317" style="width: 100.0%; height: 100.0%;">     <b>Orlando</b><br/>     Records: 1,230<br/>     Hospitals: 1230<br/>     CPT Types: 7<br/>     Market Size: Medium     </div>`)[0];
+                popup_7d735e30e48076636e3b770d884b7142.setContent(html_79bae3bbae5920b0a17766ce858d3317);
+            
+        
+
+        circle_marker_faf2b59b526b7e42280eaa52b7636b6c.bindPopup(popup_7d735e30e48076636e3b770d884b7142)
+        ;
+
+        
+    
+    
+            var circle_marker_83f47fa7c56d6baf6a688a84ae6a1084 = L.circleMarker(
+                [26.9736, -82.0912],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.89570943075616, "stroke": true, "weight": 2}
+            ).addTo(map_a1674fd503b90c40000252e3f1099d1a);
+        
+    
+        var popup_1081558fe389228a6f6b1c5590c6988a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e56d83e5449077ca6a33c3b45002ad39 = $(`<div id="html_e56d83e5449077ca6a33c3b45002ad39" style="width: 100.0%; height: 100.0%;">     <b>PORT CHARLOTTE</b><br/>     Records: 896<br/>     Hospitals: 896<br/>     CPT Types: 7<br/>     Market Size: Small     </div>`)[0];
+                popup_1081558fe389228a6f6b1c5590c6988a.setContent(html_e56d83e5449077ca6a33c3b45002ad39);
+            
+        
+
+        circle_marker_83f47fa7c56d6baf6a688a84ae6a1084.bindPopup(popup_1081558fe389228a6f6b1c5590c6988a)
+        ;
+
+        
+    
+    
+            var circle_marker_67a434335dad490e50f25e3b43238a7b = L.circleMarker(
+                [29.0465, -81.1988],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.54864061172472, "stroke": true, "weight": 2}
+            ).addTo(map_a1674fd503b90c40000252e3f1099d1a);
+        
+    
+        var popup_6d010e4e6239fd5a044ee8a1f8046b8c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_41d3b84734aace5d657398b91817e061 = $(`<div id="html_41d3b84734aace5d657398b91817e061" style="width: 100.0%; height: 100.0%;">     <b>Palm Coast</b><br/>     Records: 4,300<br/>     Hospitals: 4300<br/>     CPT Types: 7<br/>     Market Size: Large     </div>`)[0];
+                popup_6d010e4e6239fd5a044ee8a1f8046b8c.setContent(html_41d3b84734aace5d657398b91817e061);
+            
+        
+
+        circle_marker_67a434335dad490e50f25e3b43238a7b.bindPopup(popup_6d010e4e6239fd5a044ee8a1f8046b8c)
+        ;
+
+        
+    
+    
+            var circle_marker_11f1963e0c0075895616ecec3d0ecfa4 = L.circleMarker(
+                [27.7676, -82.6403],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.412064570943077, "stroke": true, "weight": 2}
+            ).addTo(map_a1674fd503b90c40000252e3f1099d1a);
+        
+    
+        var popup_8cbc989a27eb61df6943b63bc3987e3f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8dd249df12c8d3ac90a59a1c8ed2a47a = $(`<div id="html_8dd249df12c8d3ac90a59a1c8ed2a47a" style="width: 100.0%; height: 100.0%;">     <b>Petersburg</b><br/>     Records: 1,842<br/>     Hospitals: 1842<br/>     CPT Types: 7<br/>     Market Size: Medium     </div>`)[0];
+                popup_8cbc989a27eb61df6943b63bc3987e3f.setContent(html_8dd249df12c8d3ac90a59a1c8ed2a47a);
+            
+        
+
+        circle_marker_11f1963e0c0075895616ecec3d0ecfa4.bindPopup(popup_8cbc989a27eb61df6943b63bc3987e3f)
+        ;
+
+        
+    
+    
+            var circle_marker_ec5653a7a85280ac62fe564f57ac2427 = L.circleMarker(
+                [26.9736, -82.0912],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.315739167374682, "stroke": true, "weight": 2}
+            ).addTo(map_a1674fd503b90c40000252e3f1099d1a);
+        
+    
+        var popup_7f32bb3b17d804bab03c38880d1c080a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2b41429be3174ccedf1f4c1d6c73711e = $(`<div id="html_2b41429be3174ccedf1f4c1d6c73711e" style="width: 100.0%; height: 100.0%;">     <b>Port Charlotte</b><br/>     Records: 1,009<br/>     Hospitals: 1009<br/>     CPT Types: 5<br/>     Market Size: Medium     </div>`)[0];
+                popup_7f32bb3b17d804bab03c38880d1c080a.setContent(html_2b41429be3174ccedf1f4c1d6c73711e);
+            
+        
+
+        circle_marker_ec5653a7a85280ac62fe564f57ac2427.bindPopup(popup_7f32bb3b17d804bab03c38880d1c080a)
+        ;
+
+        
+    
+    
+            var circle_marker_c9dde5e27a4b927782482a226b98a757 = L.circleMarker(
+                [28.7805, -81.2753],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.0, "stroke": true, "weight": 2}
+            ).addTo(map_a1674fd503b90c40000252e3f1099d1a);
+        
+    
+        var popup_1a32e00dd0a4660aedb722eb146fe35e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9eba17ccf8ed60ecf5957f12ce52e323 = $(`<div id="html_9eba17ccf8ed60ecf5957f12ce52e323" style="width: 100.0%; height: 100.0%;">     <b>SANFORD</b><br/>     Records: 386<br/>     Hospitals: 386<br/>     CPT Types: 7<br/>     Market Size: Small     </div>`)[0];
+                popup_1a32e00dd0a4660aedb722eb146fe35e.setContent(html_9eba17ccf8ed60ecf5957f12ce52e323);
+            
+        
+
+        circle_marker_c9dde5e27a4b927782482a226b98a757.bindPopup(popup_1a32e00dd0a4660aedb722eb146fe35e)
+        ;
+
+        
+    
+    
+            var circle_marker_2de3c68445ad99beca89da41df3a6c96 = L.circleMarker(
+                [30.4383, -84.2807],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.051932880203909, "stroke": true, "weight": 2}
+            ).addTo(map_a1674fd503b90c40000252e3f1099d1a);
+        
+    
+        var popup_45fabe6f77a171b09102815389f2b28e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_14199542c75dec4fa13fbd5301b0109d = $(`<div id="html_14199542c75dec4fa13fbd5301b0109d" style="width: 100.0%; height: 100.0%;">     <b>TALLAHASSEE</b><br/>     Records: 669<br/>     Hospitals: 669<br/>     CPT Types: 7<br/>     Market Size: Small     </div>`)[0];
+                popup_45fabe6f77a171b09102815389f2b28e.setContent(html_14199542c75dec4fa13fbd5301b0109d);
+            
+        
+
+        circle_marker_2de3c68445ad99beca89da41df3a6c96.bindPopup(popup_45fabe6f77a171b09102815389f2b28e)
+        ;
+
+        
+    
+    
+            var circle_marker_5011b3016bc4991f2dd72fff48c092d4 = L.circleMarker(
+                [27.9506, -82.4572],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 45.0, "stroke": true, "weight": 2}
+            ).addTo(map_a1674fd503b90c40000252e3f1099d1a);
+        
+    
+        var popup_c374442ab8ed54a71b4784053235a9a2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_df7212fcd796d9cb67988b7d3fea8014 = $(`<div id="html_df7212fcd796d9cb67988b7d3fea8014" style="width: 100.0%; height: 100.0%;">     <b>Tampa</b><br/>     Records: 9,802<br/>     Hospitals: 9802<br/>     CPT Types: 7<br/>     Market Size: Large     </div>`)[0];
+                popup_c374442ab8ed54a71b4784053235a9a2.setContent(html_df7212fcd796d9cb67988b7d3fea8014);
+            
+        
+
+        circle_marker_5011b3016bc4991f2dd72fff48c092d4.bindPopup(popup_c374442ab8ed54a71b4784053235a9a2)
+        ;
+
+        
+    
+    
+            var circle_marker_24d6d0ffb980f700e60d0d96d58a7ad0 = L.circleMarker(
+                [28.1447, -82.7539],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.875955819881053, "stroke": true, "weight": 2}
+            ).addTo(map_a1674fd503b90c40000252e3f1099d1a);
+        
+    
+        var popup_6bead42bd156384176a6adcf889e1a22 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bc77abcc1234260aa0c8d8df6ba1e3c8 = $(`<div id="html_bc77abcc1234260aa0c8d8df6ba1e3c8" style="width: 100.0%; height: 100.0%;">     <b>Tarpon Springs</b><br/>     Records: 3,850<br/>     Hospitals: 3850<br/>     CPT Types: 7<br/>     Market Size: Large     </div>`)[0];
+                popup_6bead42bd156384176a6adcf889e1a22.setContent(html_bc77abcc1234260aa0c8d8df6ba1e3c8);
+            
+        
+
+        circle_marker_24d6d0ffb980f700e60d0d96d58a7ad0.bindPopup(popup_6bead42bd156384176a6adcf889e1a22)
+        ;
+
+        
+    
+    
+            var circle_marker_44a7db5e6969fbda1f54036af6581379 = L.circleMarker(
+                [28.8062, -81.7886],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.37022090059473, "stroke": true, "weight": 2}
+            ).addTo(map_a1674fd503b90c40000252e3f1099d1a);
+        
+    
+        var popup_7ae4dc9059f88a75a987cfca9aecb8b9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_456e52455d9e2bb1d5f162f11f1a1477 = $(`<div id="html_456e52455d9e2bb1d5f162f11f1a1477" style="width: 100.0%; height: 100.0%;">     <b>Tavares</b><br/>     Records: 4,252<br/>     Hospitals: 4252<br/>     CPT Types: 7<br/>     Market Size: Large     </div>`)[0];
+                popup_7ae4dc9059f88a75a987cfca9aecb8b9.setContent(html_456e52455d9e2bb1d5f162f11f1a1477);
+            
+        
+
+        circle_marker_44a7db5e6969fbda1f54036af6581379.bindPopup(popup_7ae4dc9059f88a75a987cfca9aecb8b9)
+        ;
+
+        
+    
+    
+            var circle_marker_803955f765abaf1a9621db9a1192ee23 = L.circleMarker(
+                [28.2364, -82.1854],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.619371282922685, "stroke": true, "weight": 2}
+            ).addTo(map_a1674fd503b90c40000252e3f1099d1a);
+        
+    
+        var popup_6d3857deefdd9b76548d64b770ed55e3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1aa7946e39cf272eca36efff3b4c982c = $(`<div id="html_1aa7946e39cf272eca36efff3b4c982c" style="width: 100.0%; height: 100.0%;">     <b>Zephyrhills</b><br/>     Records: 4,050<br/>     Hospitals: 4050<br/>     CPT Types: 7<br/>     Market Size: Large     </div>`)[0];
+                popup_6d3857deefdd9b76548d64b770ed55e3.setContent(html_1aa7946e39cf272eca36efff3b4c982c);
+            
+        
+
+        circle_marker_803955f765abaf1a9621db9a1192ee23.bindPopup(popup_6d3857deefdd9b76548d64b770ed55e3)
+        ;
+
+        
+    
+</script>
+</html>
