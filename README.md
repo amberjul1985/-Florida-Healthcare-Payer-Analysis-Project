@@ -4,6 +4,7 @@
 **Course:** BANA 650: Healthcare Analytics  
 **Institution:** California State University, Northridge (CSUN)  
 **Team:** Julian Amberg, Robby Deffo, Ani Harutyunyan, Diana Manukyan
+
 **Status:** ✅ Complete
 
 ---
